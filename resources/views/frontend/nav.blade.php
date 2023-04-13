@@ -51,7 +51,11 @@
                     <a class="nav-link" href="{{ route('logout') }}"><small class="small-title"><strong
                                 class="text-warning"></strong></small> Logout</a>
                 </li>
+                {{-- {{ dd($user)}} --}}
 
+                {{-- @if ($)
+
+                @endif --}}
                 @else
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}"><small class="small-title"><strong

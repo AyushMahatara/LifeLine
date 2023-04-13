@@ -23,6 +23,7 @@ class ArticleController extends Controller
         $article = new Article();
 
         $article->name = $request->name;
+        $article->writer = $request->writer;
         $article->description = $request->description;
         // $article->title = $request->title;
 
@@ -56,6 +57,8 @@ class ArticleController extends Controller
         $article = Article::find($id);
 
         $article->name = $request->name;
+        $article->writer = $request->writer;
+
         $article->description = $request->description;
 
 

@@ -10,14 +10,19 @@
                     <div class="carousel-item active">
                         <div class="container position-relative h-100">
                             <div class="carousel-caption d-flex flex-column justify-content-center">
-                                <small class="small-title">Introducing LifiLine <strong
-                                        class="text-warning"></strong></small>
+                                @foreach ($adv as $ad)
+                                {{-- {{ dd($ad->id) }} --}}
+                                @if ($ad->id == 1)
+                                <small class="small-title">{{ $ad->name }}<strong class="text-warning"></strong></small>
 
-                                <h1>We're Here to<span class="text-warning"> Help</span> You Achieve <span
-                                        class="text-warning">Optimal Health</span></h1>
+                                <h1><span class="text-warning">{{ $ad->description }}</span></h1>
+                                @endif
+                                @endforeach
+
+
 
                                 <div class="d-flex align-items-center mt-4">
-                                    <a class="custom-btn btn custom-link" href="#section_2">Health Tips</a>
+                                    <a class="custom-btn btn custom-link" href="{{ route('article') }}">Health Tips</a>
 
                                     <a class="popup-youtube custom-icon d-flex ms-4"
                                         href="https://www.youtube.com/watch?v=xNoanoQ5syY&ab_channel=Dr.EricBergDC">
@@ -35,14 +40,17 @@
                     <div class="carousel-item">
                         <div class="container position-relative h-100">
                             <div class="carousel-caption d-flex flex-column justify-content-center">
-                                <small class="small-title">Introducing LifiLine <strong
-                                        class="text-warning"></strong></small>
+                                @foreach ($adv as $ad)
+                                {{-- {{ dd($ad->id) }} --}}
+                                @if ($ad->id == 2)
+                                <small class="small-title">{{ $ad->name }}<strong class="text-warning"></strong></small>
 
-                                <h1>We're Here to<span class="text-warning"> Help</span> You Achieve <span
-                                        class="text-warning">Optimal Health</span></h1>
+                                <h1><span class="text-warning">{{ $ad->description }}</span></h1>
+                                @endif
+                                @endforeach
 
                                 <div class="d-flex align-items-center mt-4">
-                                    <a class="custom-btn btn custom-link" href="#section_2">Health Tips</a>
+                                    <a class="custom-btn btn custom-link" href="{{ route('article') }}">Health Tips</a>
 
                                     <a class="popup-youtube custom-icon d-flex ms-4"
                                         href="https://www.youtube.com/watch?v=VStvZjykQ00">
@@ -335,15 +343,15 @@
                 <h5>Hospitals are a beacon of hope, providing essential medical care and support to individuals and
                     communities in times of need.</h5>
             </div>
-
+            @foreach ($hos as $hos)
             <div class="col-lg-4 col-12">
                 <div class="projects-thumb projects-thumb-small">
-                    <a href="{{ route('bir') }}">
-                        <img src="images/projects/birhos.png" class="img-fluid projects-image" alt="">
+                    <a href="{{ route('hospital_details') }}">
+                        <img src="{{ asset('hospital/'. $hos['image'] ) }}" class="img-fluid projects-image" alt="">
 
                         <div class="projects-info">
                             <div class="projects-title-wrap">
-                                <small class="projects-small-title">BIR HOSPITAL</small>
+                                <small class="projects-small-title">{{ $hos->name }}</small>
 
                                 {{-- <h2 class="projects-title"></h2> --}}
                             </div>
@@ -357,8 +365,10 @@
                     </a>
                 </div>
             </div>
+            @endforeach
 
-            <div class="col-lg-4 col-12">
+
+            {{-- <div class="col-lg-4 col-12">
                 <div class="projects-thumb projects-thumb-small">
                     <a href="{{ route('bpkhs') }}">
                         <img src="images/projects/bpkhs.png" class="img-fluid projects-image" alt="">
@@ -368,7 +378,6 @@
                                 <small class="projects-small-title">B.P. Koirala Institute of Health Sciences
                                     (BPKIHS)</small>
 
-                                {{-- <h2 class="projects-title">MCL Group</h2> --}}
                             </div>
 
                             <div class="projects-btn-wrap mt-4">
@@ -390,7 +399,6 @@
                             <div class="projects-title-wrap">
                                 <small class="projects-small-title">CHITWAN MEDICAL COLLEGE</small>
 
-                                {{-- <h2 class="projects-title">Fredi</h2> --}}
                             </div>
 
                             <div class="projects-btn-wrap mt-4">
@@ -412,7 +420,6 @@
                             <div class="projects-title-wrap">
                                 <small class="projects-small-title">MAHARAJ TEACHING HOSPITAL</small>
 
-                                {{-- <h2 class="projects-title">Banana</h2> --}}
                             </div>
 
                             <div class="projects-btn-wrap mt-4">
@@ -423,7 +430,7 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- <div class="col-lg-8 col-12">
                 <div class="projects-thumb projects-thumb-large">
@@ -447,7 +454,7 @@
                 </div>
             </div> --}}
 
-            <div class="col-lg-4 col-12">
+            {{-- <div class="col-lg-4 col-12">
                 <div class="projects-thumb projects-thumb-small">
                     <a href="{{ route('narayani') }}">
                         <img src="images/projects/narayani.png" class="img-fluid projects-image" alt="">
@@ -456,7 +463,6 @@
                             <div class="projects-title-wrap">
                                 <small class="projects-small-title">NARAYANI SUBREGIONAL HOSPITAL</small>
 
-                                {{-- <h2 class="projects-title">MCL Group</h2> --}}
                             </div>
 
                             <div class="projects-btn-wrap mt-4">
@@ -478,7 +484,6 @@
                             <div class="projects-title-wrap">
                                 <small class="projects-small-title">NEPALGUNJ MEDICAL COLLEGE</small>
 
-                                {{-- <h2 class="projects-title">Maldon</h2> --}}
                             </div>
 
                             <div class="projects-btn-wrap mt-4">
@@ -489,7 +494,7 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div>

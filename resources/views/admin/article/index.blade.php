@@ -47,7 +47,8 @@
                     <form action="" method="">
                         <table class="centertbl">
                             <tr>
-                                <td class="th_deg">Name</td>
+                                <td class="th_deg">Titlle</td>
+                                <td class="th_deg">Article By</td>
                                 <td class="th_deg">Description</td>
                                 <td class="th_deg">Action</td>
                             </tr>
@@ -55,6 +56,8 @@
                             @foreach ($article as $a)
                             <tr>
                                 <td>{{ $a->name }}</td>
+                                <td>{{ $a->writer }}</td>
+
                                 <td>{{ $a->description }}</td>
 
                                 <td><a onclick="return confirm('U Sure')" href="{{ url('delete_article', $a->id) }}"

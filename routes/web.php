@@ -19,9 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.main');
-});
+// Route::get('/', function () {
+//     return view('frontend.main');
+// });
+Route::get('/', [HomeController::class, 'hm']);
 
 Route::middleware([
     'auth:sanctum',
@@ -44,9 +45,9 @@ Route::get('/redirect', [HomeController::class, 'redirect']);
 
 
 
-Route::get('/med', [homeController::class, 'med'])->name('med');
-Route::get('/illness', [homeController::class, 'illness'])->name('illness');
-// Route::get('/index', [AdviceController::class, 'index'])->name('advice.index');
+Route::get('/med', [HomeController::class, 'med'])->name('med');
+Route::get('/illne', [HomeController::class, 'illness'])->name('illness');
+Route::get('/health/article', [HomeController::class, 'article'])->name('article');
 
 // Route::get('/redirect', [homeController::class, 'redirect']);
 
@@ -103,11 +104,13 @@ Route::prefix('/medicine')->group(function () {
 Route::get('/delete_medicine/{id}', [MedicineController::class, 'delete']);
 
 
-Route::prefix('/hospital')->group(function () {
-    Route::get('/bir', [HomeController::class, 'bir'])->name('bir');
-    Route::get('/bpkhs', [HomeController::class, 'bpkhs'])->name('bpkhs');
-    Route::get('/chitwan', [HomeController::class, 'chitwan'])->name('chitwan');
-    Route::get('/maharaj', [HomeController::class, 'maharaj'])->name('maharaj');
-    Route::get('/narayani', [HomeController::class, 'narayani'])->name('narayani');
-    Route::get('/nepalgunj', [HomeController::class, 'nepalgunj'])->name('nepalgunj');
-});
+// Route::prefix('/hospital')->group(function () {
+//     Route::get('/bir', [HomeController::class, 'bir'])->name('bir');
+//     Route::get('/bpkhs', [HomeController::class, 'bpkhs'])->name('bpkhs');
+//     Route::get('/chitwan', [HomeController::class, 'chitwan'])->name('chitwan');
+//     Route::get('/maharaj', [HomeController::class, 'maharaj'])->name('maharaj');
+//     Route::get('/narayani', [HomeController::class, 'narayani'])->name('narayani');
+//     Route::get('/nepalgunj', [HomeController::class, 'nepalgunj'])->name('nepalgunj');
+// });
+
+Route::get('/hospital/details', [HomeController::class, 'hospital_details'])->name('hospital_details');

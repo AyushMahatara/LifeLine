@@ -56,8 +56,13 @@
                         @csrf
 
                         <div class="div_design">
-                            <label for="">Article Name :</label>
+                            <label for="">Article Title :</label>
                             <input class="input_color" type="text" name="name" value="{{ $article->name }}">
+                        </div>
+                        <br>
+                        <div class="div_design">
+                            <label for="">Article By :</label>
+                            <input class="input_color" type="text" name="writer" value="{{ $article->writer }}">
                         </div>
                         <br>
                         <div class=" div_design">

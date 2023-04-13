@@ -59,8 +59,13 @@
                         </div>
                         <br> --}}
                         <div class="div_design">
-                            <label for="">Article Name :</label>
+                            <label for="">Article Ttitle :</label>
                             <input class="input_color" type="text" name="name" placeholder="write a title">
+                        </div>
+                        <br>
+                        <div class="div_design">
+                            <label for="">Article By :</label>
+                            <input class="input_color" type="text" name="writer" placeholder="write a title">
                         </div>
                         <br>
                         <div class="div_design">

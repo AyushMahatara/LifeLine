@@ -65,7 +65,8 @@
                         <br>
                         <div class="div_design">
                             <label for="">Advice Description :</label>
-                            <textarea class="input_color" name="description" id="" cols="30" rows="10"></textarea>
+
+                            <textarea class="input_color" name="description" style="color:black" id="editor"></textarea>
                         </div><br>
 
                         {{-- <div class="div_design">
@@ -86,7 +87,17 @@
     <!-- container-scroller -->
     <!-- plugins:js -->
     @include('admin.layouts.script')
-
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+    </script>
     <!-- End custom js for this page -->
 </body>
 

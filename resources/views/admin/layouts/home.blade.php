@@ -24,6 +24,7 @@
     <!-- container-scroller -->
     <!-- plugins:js -->
     @include('admin.layouts.script')
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
     <!-- End custom js for this page -->
 </body>
 

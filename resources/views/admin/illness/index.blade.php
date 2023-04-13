@@ -42,12 +42,12 @@
         <div class="main-panel">
             <div class="content-wrapper">
                 <div class="center">
-                    <h1>Add Hospital</h1>
+                    <h1>Add Diseases</h1>
                     <br>
                     <form action="" method="">
                         <table class="centertbl">
                             <tr>
-                                <td class="th_deg">Name</td>
+                                <td class="th_deg">Title</td>
                                 <td class="th_deg">Description</td>
                                 <td class="th_deg">Image</td>
                                 <td class="th_deg">Action</td>
@@ -56,6 +56,7 @@
                             @foreach ($illness as $i)
                             <tr>
                                 <td>{{ $i->name }}</td>
+                                <td>{{ $i->writer }}</td>
                                 <td>{{ $i->description }}</td>
                                 <td>
                                     <img src="/illness/{{ $i->image }}" alt="" width="250px" height="200px">

@@ -56,13 +56,20 @@
             </div>
         </li> --}}
         <li class="nav-item nav-category">
-            <span class="nav-link">Panel</span>
+            <a href="/"><span class="nav-link">
+                    <h2>Lifeline</h2>
+                </span></a>
+
+        </li>
+        <li class="nav-item nav-category">
+            <a href="/redirect"><span class="nav-link">Panel</span></a>
+
         </li>
 
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-icon">
-                    <i class="mdi mdi-laptop"></i>
+                    <i class="mdi mdi-hospital"></i>
                 </span>
                 <span class="menu-title">Hospital</span>
             </a>
@@ -78,7 +85,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-icon">
-                    <i class="mdi mdi-laptop"></i>
+                    <i class="mdi mdi-medical-bag"></i>
                 </span>
                 <span class="menu-title">Medicine</span>
             </a>
@@ -94,7 +101,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-icon">
-                    <i class="mdi mdi-laptop"></i>
+                    <i class="mdi mdi-emoticon-devil"></i>
                 </span>
                 <span class="menu-title">Diseases</span>
             </a>
@@ -126,7 +133,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-icon">
-                    <i class="mdi mdi-laptop"></i>
+                    <i class="mdi mdi-file-document-edit"></i>
                 </span>
                 <span class="menu-title">Article</span>
             </a>
