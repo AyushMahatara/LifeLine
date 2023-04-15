@@ -66,7 +66,7 @@
                         <div class="div_design">
                             <label for="">Advice Description :</label>
 
-                            <textarea class="input_color" name="description" style="color:black" id="editor"></textarea>
+                            <textarea name="description" id="editor"></textarea>
                         </div><br>
 
                         {{-- <div class="div_design">
@@ -98,6 +98,12 @@
                         console.error( error );
                 } );
     </script>
+    <style>
+        .ck.ck-editor__main>.ck-editor__editable {
+            background: rgb(0, 0, 0);
+            border-radius: 0;
+        }
+    </style>
     <!-- End custom js for this page -->
 </body>
 
