@@ -67,7 +67,7 @@
                         <br>
                         <div class=" div_design">
                             <label for="">Article Description :</label>
-                            <textarea class="input_color" name="description" id="#editor" cols="30"
+                            <textarea class="input_color" name="description" id="editor" cols="30"
                                 rows="10">{{ $article->name }}</textarea>
                         </div><br>
 

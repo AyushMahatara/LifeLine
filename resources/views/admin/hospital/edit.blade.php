@@ -66,7 +66,7 @@
                         <br>
                         <div class=" div_design">
                             <label for="">Hospital Description :</label>
-                            <textarea class="input_color" name="description" id="#editor" cols="30"
+                            <textarea class="input_color" name="description" id="editor" cols="30"
                                 rows="10">{!! $hospital->description !!}</textarea>
                         </div><br>
                         <div class="div_design">

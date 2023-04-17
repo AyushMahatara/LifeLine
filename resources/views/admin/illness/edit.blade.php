@@ -63,7 +63,7 @@
                         <div class=" div_design">
                             <label for="">Illness Description :</label>
                             <textarea class="input_color" name="description"
-                                id="#editor">{{ $illness->description }}</textarea>
+                                id="editor">{{ $illness->description }}</textarea>
                         </div><br>
                         <div class="div_design">
                             <label for="">Current Illness Image :</label>
