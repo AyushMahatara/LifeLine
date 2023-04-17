@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('writer');
-            $table->string('description');
+            $table->longText('description');
             $table->timestamps();
         });
     }

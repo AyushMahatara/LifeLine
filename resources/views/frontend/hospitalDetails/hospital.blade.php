@@ -28,11 +28,14 @@
                     </h5>
                     <p> <b>{{ $hos->name }}</b>
                         <br>
-                        {{$hos->description}}
+                        {!! $hos->description !!}
                     </p>
-
+                    <br>
+                    <hr>
                 </div>
+
             </div>
+
             @endforeach
 
     </section>

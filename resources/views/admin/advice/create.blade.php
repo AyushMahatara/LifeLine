@@ -59,7 +59,7 @@
                         </div>
                         <br> --}}
                         <div class="div_design">
-                            <label for="">Advice Name :</label>
+                            <label for="">Advice Title :</label>
                             <input class="input_color" type="text" name="name" placeholder="write a title">
                         </div>
                         <br>

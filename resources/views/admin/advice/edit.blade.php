@@ -56,14 +56,15 @@
                         @csrf
 
                         <div class="div_design">
-                            <label for="">Advice Name :</label>
+                            <label for="">Advice Title :</label>
+                            {{-- {{ dd($advice->description) }} --}}
                             <input class="input_color" type="text" name="name" value="{{ $advice->name }}">
                         </div>
                         <br>
                         <div class=" div_design">
                             <label for="">Advice Description :</label>
-                            <textarea class="input_color" name="description" id="" cols="30"
-                                rows="10">{{ $advice->name }}</textarea>
+                            <textarea name="description" id="editor">{{ $advice->description }}</textarea>
+
                         </div><br>
 
                         <div class="div_design">
@@ -79,7 +80,23 @@
     <!-- container-scroller -->
     <!-- plugins:js -->
     @include('admin.layouts.script')
-
+    <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+                .create( document.querySelector( '#editor' ) )
+                .then( editor => {
+                        console.log( editor );
+                } )
+                .catch( error => {
+                        console.error( error );
+                } );
+    </script>
+    <style>
+        .ck.ck-editor__main>.ck-editor__editable {
+            background: rgb(0, 0, 0);
+            border-radius: 0;
+        }
+    </style>
     <!-- End custom js for this page -->
 </body>
 

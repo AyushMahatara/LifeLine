@@ -54,7 +54,7 @@
                     <form action="{{ route('hospital.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="div_design">
-                            <label for="">Hospital Title :</label>
+                            <label for="">Hospital Details :</label>
                             <input class="input_color" type="text" name="title" placeholder="write a title">
                         </div>
                         <br>

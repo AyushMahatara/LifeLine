@@ -13,9 +13,10 @@
                                 @foreach ($adv as $ad)
                                 {{-- {{ dd($ad->id) }} --}}
                                 @if ($ad->id == 1)
-                                <small class="small-title">{{ $ad->name }}<strong class="text-warning"></strong></small>
+                                <small class="small-title"><strong class="text-warning">{{ $ad->name }}</strong></small>
 
-                                <h1><span class="text-warning">{{ $ad->description }}</span></h1>
+                                <small class="small-title">{!! $ad->description !!}</small>
+
                                 @endif
                                 @endforeach
 
@@ -43,9 +44,9 @@
                                 @foreach ($adv as $ad)
                                 {{-- {{ dd($ad->id) }} --}}
                                 @if ($ad->id == 2)
-                                <small class="small-title">{{ $ad->name }}<strong class="text-warning"></strong></small>
+                                <small class="small-title"><strong class="text-warning">{{ $ad->name }}</strong></small>
 
-                                <h1><span class="text-warning">{{ $ad->description }}</span></h1>
+                                <small class="small-title">{!! $ad->description !!}</small>
                                 @endif
                                 @endforeach
 

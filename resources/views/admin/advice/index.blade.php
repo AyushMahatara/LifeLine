@@ -55,7 +55,7 @@
                             @foreach ($advice as $a)
                             <tr>
                                 <td>{{ $a->name }}</td>
-                                <td>{{ $a->description }}</td>
+                                <td>{!! $a->description !!}</td>
 
                                 <td><a onclick="return confirm('U Sure')" href="{{ url('delete_advice', $a->id) }}"
                                         class="btn btn-danger">Delete</a>

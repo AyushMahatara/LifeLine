@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('hospitals', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->longText('title');
             $table->string('name');
-            $table->string('description');
+            $table->longText('description');
             $table->string('image');
             $table->timestamps();
         });

@@ -42,7 +42,7 @@
         <div class="main-panel">
             <div class="content-wrapper">
                 <div class="center">
-                    <h1>Add Hospital</h1>
+                    <h1>Hospitals Details</h1>
                     <br>
                     <form action="" method="">
                         <table class="centertbl">
@@ -58,7 +58,7 @@
                             <tr>
                                 <td>{{ $h->title }}</td>
                                 <td>{{ $h->name }}</td>
-                                <td>{{ $h->description }}</td>
+                                <td>{!! $h->description !!}</td>
                                 <td>
                                     <img src="/hospital/{{ $h->image }}" alt="" width="250px" height="200px">
                                 </td>
