@@ -114,3 +114,5 @@ Route::get('/delete_medicine/{id}', [MedicineController::class, 'delete']);
 // });
 
 Route::get('/hospital/details', [HomeController::class, 'hospital_details'])->name('hospital_details');
+Route::get('/send_email/{id}', [HomeController::class, 'send_email'])->name('send_email');
+Route::post('/send_user_email/{id}', [HomeController::class, 'send_user_email'])->name('send_user_email');

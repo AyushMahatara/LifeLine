@@ -8,9 +8,13 @@ use App\Models\Hospital;
 use App\Models\Illness;
 use App\Models\Medicine;
 use App\Models\User;
+use App\Notifications\SendEmailNotification;
 use Faker\Provider\Medical;
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification as FacadesNotification;
 
 class HomeController extends Controller
 {
@@ -34,7 +38,7 @@ class HomeController extends Controller
             return view('admin.layouts.home', compact('admin'), $data);
         } else {
             // dd($data);
-            return view('frontend.main');
+            return view('frontend.main')->with($data);
         }
     }
 
@@ -75,6 +79,30 @@ class HomeController extends Controller
         $data['hos'] = Hospital::all();
         return view('frontend.hospitalDetails.hospital')->with($data);
     }
+
+    public function send_email($id)
+    {
+        $data = User::find($id);
+        return view('admin.layouts.sendEmail', compact('data'));
+    }
+
+    public function send_user_email(Request $request, $id)
+    {
+        $data = User::find($id);
+
+        $details = [
+            'greeting' => $request->greeting,
+            'body' => $request->body,
+            'button' => $request->button,
+            'url' => $request->url,
+        ];
+        // Notification::send($data, new SendEmailNotification($details));
+        FacadesNotification::send($data, new SendEmailNotification($details));
+
+        return redirect()->back()->with('message', 'Email send Successfully');
+    }
+
+    // yo
 
     public function bir()
     {

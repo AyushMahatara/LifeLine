@@ -336,54 +336,54 @@
                 </div>
             </div>
         </div>
+        --}}
         <div class="row ">
             <div class="col-12 grid-margin">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Order Status</h4>
+                        <h4 class="card-title">Users</h4>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>
+                                        {{-- <th>
                                             <div class="form-check form-check-muted m-0">
                                                 <label class="form-check-label">
                                                     <input type="checkbox" class="form-check-input">
                                                 </label>
                                             </div>
-                                        </th>
-                                        <th> Client Name </th>
-                                        <th> Order No </th>
-                                        <th> Product Cost </th>
-                                        <th> Project </th>
-                                        <th> Payment Mode </th>
-                                        <th> Start Date </th>
-                                        <th> Payment Status </th>
+                                        </th> --}}
+                                        <th> Name </th>
+                                        <th> Email </th>
+                                        <th> User Type </th>
+                                        {{-- <th> Project </th> --}}
+                                        {{-- <th> Payment Mode </th> --}}
+                                        {{-- <th> Start Date </th> --}}
+                                        <th> Action </th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($user as $user)
                                     <tr>
+
+                                        <td> {{ $user->name}} </td>
+
+                                        <td> {{ $user->email }} </td>
                                         <td>
-                                            <div class="form-check form-check-muted m-0">
-                                                <label class="form-check-label">
-                                                    <input type="checkbox" class="form-check-input">
-                                                </label>
-                                            </div>
+                                            @if( $user->usertype == '1' )
+                                            Admin
+                                            @else
+                                            Normal User
+                                            @endif
                                         </td>
                                         <td>
-                                            <img src="assets/images/faces/face1.jpg" alt="image" />
-                                            <span class="pl-2">Henry Klein</span>
-                                        </td>
-                                        <td> 02312 </td>
-                                        <td> $14,500 </td>
-                                        <td> Dashboard </td>
-                                        <td> Credit card </td>
-                                        <td> 04 Dec 2019 </td>
-                                        <td>
-                                            <div class="badge badge-outline-success">Approved</div>
+                                            {{-- {{ $user->id }} --}}
+                                            <a href="{{ route('send_email', $user->id) }}"
+                                                class="btn btn badge-outline-success">Send Email</a>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    @endforeach
+                                    {{-- <tr>
                                         <td>
                                             <div class="form-check form-check-muted m-0">
                                                 <label class="form-check-label">
@@ -403,8 +403,8 @@
                                         <td>
                                             <div class="badge badge-outline-warning">Pending</div>
                                         </td>
-                                    </tr>
-                                    <tr>
+                                    </tr> --}}
+                                    {{-- <tr>
                                         <td>
                                             <div class="form-check form-check-muted m-0">
                                                 <label class="form-check-label">
@@ -424,8 +424,8 @@
                                         <td>
                                             <div class="badge badge-outline-danger">Rejected</div>
                                         </td>
-                                    </tr>
-                                    <tr>
+                                    </tr> --}}
+                                    {{-- <tr>
                                         <td>
                                             <div class="form-check form-check-muted m-0">
                                                 <label class="form-check-label">
@@ -445,8 +445,8 @@
                                         <td>
                                             <div class="badge badge-outline-success">Approved</div>
                                         </td>
-                                    </tr>
-                                    <tr>
+                                    </tr> --}}
+                                    {{-- <tr>
                                         <td>
                                             <div class="form-check form-check-muted m-0">
                                                 <label class="form-check-label">
@@ -466,7 +466,7 @@
                                         <td>
                                             <div class="badge badge-outline-success">Approved</div>
                                         </td>
-                                    </tr>
+                                    </tr> --}}
                                 </tbody>
                             </table>
                         </div>
@@ -474,7 +474,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-md-6 col-xl-4 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
@@ -639,8 +639,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
+        </div> --}}
+
+        {{-- <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
