@@ -17,7 +17,7 @@
                     <div class="about-info">
                         <h5 class="mb-3 text-warning">{{ $i->name }}</h5>
 
-                        <p>{{ $i->description }}</p>
+                        <p>{!! $i->description !!}</p>
                     </div>
                 </div>
 

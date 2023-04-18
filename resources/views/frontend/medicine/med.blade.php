@@ -24,7 +24,7 @@
 
                     <div class="about-info">
                         <h5 class="mb-3 text-warning">{{ $m->name }}</h5>
-                        <p>{{ $m->description }}</p>
+                        <p>{!! $m->description !!}</p>
                     </div>
 
                 </div>
